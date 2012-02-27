@@ -69,7 +69,6 @@
         if (!pjax.support)
             return false;
 
-        console.log(anchorElement);
         // Cast anchorElement to an array if it's not an nodeList or Array
         if (!anchorElement.length)
             anchorElement = [anchorElement];
@@ -94,7 +93,6 @@
     pjax.get = function(options) {
         var xhr;
 
-console.log(options);
         // Call an external function to set the defaults for the options object
         options = setOptionDefaults(options);
 
@@ -151,7 +149,6 @@ console.log(options);
             return;
         }
 
-        console.log(JSON.stringify(state));
         if (state && state.pjax) {
             pjax.get({
                 url: state.url,
